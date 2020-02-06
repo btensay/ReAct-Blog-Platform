@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
+
 import FilesUploadComponent from "./files-upload.component";
 
 export default class CreateBlogEntry extends Component{
@@ -69,6 +70,7 @@ export default class CreateBlogEntry extends Component{
     
     axios.post("http://localhost:4000/upload", data, { 
       // receive two    parameter endpoint url ,form data
+      
     }).then(res => { // then print response status
         console.log(res.statusText)
     })
@@ -110,7 +112,7 @@ export default class CreateBlogEntry extends Component{
 
                     <div className="form-group">
                         <input type="submit" value="Create Blog Entry"  className="btn btn-primary" />
-                    </div>
+                    </div> 
                 </form>
             </div>
         )        
