@@ -3,30 +3,30 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import BlogEntryDetail from "./components/blog-detail.component";
-import Blogs from "./components/blogs.component";
-import CreateBlogEntry from "./components/create-blogentry.component";
-import EditBlogEntry from "./components/edit-blogentry.component";
-import ListBlogEntries from "./components/list-blogentries.component";
+import Blogs from "./components/anonymous-user/blog-entries.component";
+import CreateBlogEntry from "./components/admin/create-blogentry.component";
+import EditBlogEntry from "./components/admin/edit-blogentry.component";
+import ListBlogEntries from "./components/admin/list-blogentries.component";
 
 function App() {
   return (
     <Router>
       <div className="App container">
       <header className="App-header">
-        <h1>Tensu ReBlog Platform</h1>
-        <h2>Anonymous user view - blogs list</h2>
+        <h1 className="header">React Blog Platform</h1>       
       </header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="collpase navbar-collapse">
-          <ul className="navbar-nav mr-auto">
-            <li className="navbar-item">
-              <Link to="/" className="nav-link">Blogs List</Link>
-            </li>
-            <li className="navbar-item">
+          <ul className="navbar-nav">
+            <li className="navbar-item nav-link">
               <Link to="/anonymous" className="nav-link">Anonymous View</Link>
+            </li>         
+            <li className="navbar-item nav-link">
+              <Link to="/" className="nav-link">Admin View</Link>
             </li>
-            <li className="navbar-item">
+            <li className="navbar-item nav-link">
               <Link to="/create" className="nav-link">Create Blog Entry</Link>
             </li>
           </ul>

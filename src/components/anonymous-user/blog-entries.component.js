@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
-import BlogComponent from "./anonymous-user/blog.component";
+import BlogComponent from "./blog.component";
 
 
 export default class AnonymousViewBlogList extends Component{
@@ -32,8 +32,8 @@ export default class AnonymousViewBlogList extends Component{
     
     render(){
         return(
-            <div style={{marginTop: 10}} className="container">
-                <h3>Anon View ReBlog Blogs List</h3>
+            <div style={{marginTop: 30}} className="container">
+                <h3 style={{marginBottom:20}}>Anonymous View - React Blog Blog Entries</h3>
                 <div className="jumbotron">
                 { this.blogEntriesList() }
                 </div>           

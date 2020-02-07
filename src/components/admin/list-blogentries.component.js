@@ -33,18 +33,8 @@ export default class BlogEntriesList extends Component{
     render(){
         return(
             <div style={{marginTop: 10}} className="container">
-                <h3>ReBlog Entries List</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }} >
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Description</th>                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { this.blogEntriesList() }
-                    </tbody>
-                </table>            
+                <h3>Admin View - React Blog Entries List</h3>
+                <div> { this.blogEntriesList() } </div>               
             </div>
         )
     }
